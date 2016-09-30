@@ -1,23 +1,10 @@
 <template>
   <require from='./app.css'></require>
   <require from='./layout/nav/navigation'></require>
+  <require from='./pages/units/units'></require>
 
   <navigation></navigation>
   <div class="container container-wrapper">
-    <h3>${heading}</h3>
-    <table>
-      <thead>
-        <tr>
-          <td>Name:</td>
-          <td>Last updated:</td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr repeat.for="unit of units">
-            <td>${unit.name}</td>
-            <td>${unit.last_updated}</td>
-        </tr>
-      </tbody>
-    </table>
+    <units></units>
   </div>
 </template>
