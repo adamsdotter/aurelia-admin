@@ -1,0 +1,11 @@
+<template>
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <li repeat.for="item of links">
+          <a class="" href="${item.link}">${item.text}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</template>

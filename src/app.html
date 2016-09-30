@@ -1,33 +1,15 @@
 <template>
   <require from='./app.css'></require>
+  <require from='./layout/nav/navigation'></require>
 
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-      <ul class="nav navbar-nav">
-        <li class="active">
-          <a class="" href="#/">Manage units</a>
-        </li>
-        <li class="">
-          <a class="" href="#unittypes">Manage unit types</a>
-        </li>
-        <li class="">
-          <a class="" href="#changelog">Change log</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
+  <navigation></navigation>
   <div class="container container-wrapper">
     <h3>${heading}</h3>
     <table>
       <thead>
         <tr>
-          <td>
-            Name:
-          </td>
-          <td>
-            Last updated:
-          </td>
+          <td>Name:</td>
+          <td>Last updated:</td>
         </tr>
       </thead>
       <tbody>

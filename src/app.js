@@ -1,4 +1,4 @@
-import {Unit} from './unit';
+import {Unit} from './components/unit';
 
 export class App {
   constructor() {
