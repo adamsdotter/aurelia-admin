@@ -1,18 +1,41 @@
 <template>
-  <h1>${heading}</h1>
+  <require from='./app.css'></require>
 
-  <form submit.trigger="addTodo()">
-    <input type="text" value.bind="todoDescription">
-    <button type="submit">Add Todo</button>
-  </form>
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a class="" href="#/">Manage units</a>
+        </li>
+        <li class="">
+          <a class="" href="#unittypes">Manage unit types</a>
+        </li>
+        <li class="">
+          <a class="" href="#changelog">Change log</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-  <ul>
-    <li repeat.for="todo of todos">
-      <input type="checkbox" checked.bind="todo.done">
-      <span css="text-decoration: ${todo.done ? 'line-through' : 'none'}">
-        ${todo.description}
-      </span>
-      <button click.trigger="removeTodo(todo)">Remove</button>
-    </li>
-  </ul>
+  <div class="container container-wrapper">
+    <h3>${heading}</h3>
+    <table>
+      <thead>
+        <tr>
+          <td>
+            Name:
+          </td>
+          <td>
+            Last updated:
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr repeat.for="unit of units">
+            <td>${unit.name}</td>
+            <td>${unit.last_updated}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </template>
