@@ -1,18 +1,21 @@
 export class Navigation {
-  constructor() {
+  constructor(router) {
+    this.router = router;
     this.links = [
       {
         'text': 'Manage units',
-        'link': '/#'
+        'link': '/#/'
       },
       {
         'text': 'Manage unit types',
-        'link': '#unittypes'
+        'link': '/#/unittypes'
       },
       {
         'text': 'Change log',
-        'link': '#changelog'
+        'link': '/#/changelog'
       }
     ];
   }
+
+  console.log('router', router);
 }

@@ -1,10 +1,10 @@
 <template>
-  <require from='./app.css'></require>
   <require from='./layout/nav/navigation'></require>
-  <require from='./pages/units/units'></require>
+  <require from='./app.css'></require>
 
-  <navigation></navigation>
+  <navigation router.bind="router"></navigation>
   <div class="container container-wrapper">
-    <units></units>
+    <router-view></router-view>
   </div>
+
 </template>
